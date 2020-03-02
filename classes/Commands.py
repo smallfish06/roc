@@ -193,22 +193,6 @@ class OpensystemMail(AbstractMethods.ProcessHandler):
         self.next()
 
 
-class OpenMail(AbstractMethods.ProcessHandler):
-    def do_work(self):
-        while not ImageCoordinate.is_on_screen('images/mail_button'):
-            print('looking for mail')
-            coord = ImageCoordinate.coords('images/close_window')
-            clicker.click(coord)
-        else:
-            coord = ImageCoordinate.coords('images/mail_button')
-            print('will click mail')
-            if coord:
-                clicker.click(coord)
-                print('clicked mail')
-        print('process done')
-        self.next()
-
-
 class ClickReport(AbstractMethods.ProcessHandler):
     def do_work(self):
         if ImageCoordinate.is_on_screen('images/report_selected'):

@@ -13,6 +13,7 @@ class Screenshot:
     processname =''
     @classmethod
     def shot(cls,name= 'playing.png'):
+        sleep(0.2)
         hwnd = win32gui.FindWindow(None, cls.processname)
 
         # Change the line below depending on whether you want the whole window

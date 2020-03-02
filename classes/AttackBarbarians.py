@@ -37,7 +37,7 @@ class AttackBarbarians:
             click_confirm = SimpleClick('confirm')
             get_cityrss = GatherCityrss()
 
-            openmail = OpenMail()
+            openmail = SimpleClick('mail_button')
             opensystemmail = OpensystemMail()
             receivemail = SimpleClick('receive')
             closemail = SimpleClick('close_window')
